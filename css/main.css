@@ -29,13 +29,13 @@ main{
   padding-top: 3rem;
   background: url("../img/background-img2.jpg") no-repeat;
   width: 100vw;
-  height: 90vh;
+  height: 85vh;
   justify-content: center;
 }
 
 .container{
   width: 60vw;
-  height: 65vh;
+  height: 70vh;
   background: rgba(63, 71, 71, .7);
   border-radius: 10px;
   
@@ -61,7 +61,7 @@ main{
 }
 
 #question{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #row3{
@@ -85,7 +85,27 @@ main{
   margin-top: 3rem;
 }
 
+#instructions{
+  font-size: 1.2rem;
+}
+
 #row5{
-  margin-top: 8rem;
+  margin-top: 6rem;
+}
+
+#startBtn{
+  font-size: 2rem;
+  border: 3px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#row6{
+  margin-top: 2rem;
+}
+
+#tagline{
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
