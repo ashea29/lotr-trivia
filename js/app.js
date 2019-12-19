@@ -171,6 +171,17 @@ function secondQuestion(){
 
 
 function thirdQuestion(){
+  //TWEAKS SOME STYLES ON THE ANSWER CHOICES, FOR AESTHETIC VALUE
+  answerArray.map((item) => {
+    item.style.width = "10rem";
+    item.style.height = "4rem"
+    item.style.fontSize = "1.15rem"
+    item.style.padding = ".7rem"
+    item.style.textAlign = "left"
+  })
+  question.style.textAlign = "left"
+
+
   // choice1.removeEventListener('click', incorrectAnswer)
   // choice2.removeEventListener('click', incorrectAnswer)
   choice3.removeEventListener('click', correctAnswer2)
@@ -192,6 +203,15 @@ function thirdQuestion(){
 
 
 function fourthQuestion(){
+  //RESETS/MODIFIES TWEAKED STYLES FROM PREVIOUS QUESTION
+  answerArray.map((item) => {
+    item.style.width = "7rem";
+    item.style.height = "3.5rem"
+    item.style.fontSize = "1.5rem"
+    item.style.padding = ".5rem"
+    item.style.textAlign = "center"
+  })
+
   questionNumber.innerHTML = "QUESTION FOUR:"
   question.innerHTML = question4
   choice1.innerHTML = q4AnswerSet[0]
@@ -232,6 +252,16 @@ function fifthQuestion(){
 
 
 function sixthQuestion(){
+  //TWEAKS SOME STYLES ON THE ANSWER CHOICES, FOR AESTHETIC VALUE
+  answerArray.map((item) => {
+    item.style.width = "10rem";
+    item.style.height = "4rem"
+    item.style.fontSize = "1.1rem"
+    item.style.padding = ".7rem"
+    item.style.textAlign = "left"
+  })
+
+
   questionNumber.innerHTML = "QUESTION SIX:"
   question.innerHTML = question6
   choice1.innerHTML = q6AnswerSet[0]
@@ -252,6 +282,16 @@ function sixthQuestion(){
 
 
 function seventhQuestion(){
+  //RESETS/MODIFIES TWEAKED STYLES FROM PREVIOUS QUESTION
+  answerArray.map((item) => {
+    item.style.width = "10rem";
+    item.style.height = "3.5rem"
+    item.style.fontSize = "1.5rem"
+    item.style.padding = ".5rem"
+    item.style.textAlign = "center"
+  })
+
+
   questionNumber.innerHTML = "QUESTION SEVEN:"
   question.innerHTML = question7
   choice1.innerHTML = q7AnswerSet[0]
