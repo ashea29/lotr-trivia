@@ -83,12 +83,12 @@ main{
   border-radius: 10px;
   height: 3rem;
   padding: .5rem;
-  cursor: pointer;
+  
 }
 
-#answer1:hover, #answer2:hover,
-#answer3:hover, #answer4:hover {
+.hover:hover{
   border: 2px solid white;
+  cursor: pointer;
 }
 
 #row5{
@@ -101,7 +101,7 @@ main{
 }
 
 #row6{
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 #startBtn{
