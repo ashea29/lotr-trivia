@@ -52,6 +52,7 @@ main{
 .col{
   /* border: 3px solid white; */
   margin: 0 4rem 0 4rem;
+  text-align: center;
 }
 
 .row{
@@ -61,9 +62,9 @@ main{
 }
 
 #row2{
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-family: "MiddleEarth";
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 #row3{
@@ -72,6 +73,8 @@ main{
 
 #question{
   font-size: 1.5rem;
+  font-family: Georgia;
+  font-weight: bold;
 }
 
 #row4{
@@ -81,9 +84,10 @@ main{
 #answer1, #answer2,
 #answer3, #answer4 {
   border-radius: 10px;
-  height: 3rem;
+  height: 3.5rem;
   padding: .5rem;
-  
+  font-family: Georgia;
+  font-size: 1.5rem;
 }
 
 .hover:hover{
