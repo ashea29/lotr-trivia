@@ -29,6 +29,8 @@ There were some issues in making the game look good on different screen sizes. F
 
 The awesome Lord of The Rings fonts were all downloaded from https://www.fontspace.com
 
+The background image was downloaded from https://pixabay.com/
+
 
 # License
 
