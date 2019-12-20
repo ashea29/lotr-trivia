@@ -5,7 +5,7 @@ A simple Lord of the Rings trivia game.
 
 # Motivation
 
-I built this trivia game as Project 1 for General Assembly’s Software Engineering Immersive Remote program. I decided to specifically build a Lord of the Rings trivia game, because I’m a huge fan of the works of Tolkien. My goal for this project was to build something simple but functional, hence I purposefully took a simpler approach in the code (i.e. - there may have been many much more slick ways to achieve the same thing, but I went the simple route in order to get a viable product). I plan to implement more features over time, and perhaps refactor the game logic.
+I built this trivia game as my Project 1 for General Assembly’s Software Engineering Immersive Remote program. I decided to specifically build a Lord of the Rings trivia game, because I’m a huge fan of the works of Tolkien. My goal for this project was to build something simple but functional, hence I purposefully took a simpler approach in the code (i.e. - there may have been many much more slick ways to achieve the same thing, but I went the simple route in order to get a viable product). I plan to implement more features over time, and perhaps refactor the game logic.
 
 
 # Technologies/Frameworks Used
