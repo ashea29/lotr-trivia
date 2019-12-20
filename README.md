@@ -1,4 +1,4 @@
-# Lord of the Rings Trivia Game
+# LOTR Trivia
 
 A simple Lord of the Rings trivia game.
 
