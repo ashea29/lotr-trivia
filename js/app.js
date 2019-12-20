@@ -14,7 +14,7 @@ console.log(question4)
 const question5 = "Which hobbit offers himself in service to Denethor, Steward of Gondor?"
 console.log(question5)
 
-const question6 = "What is/are the Palantir?"
+const question6 = "What is (or what are) the Palantir?"
 console.log(question6)
 
 const question7 = "In which country was the entire movie trilogy filmed?"
@@ -55,7 +55,6 @@ console.log(questionNumber)
 
 const startGameMsg = document.querySelector('#startGameMsg')
 
-
 const question = document.querySelector('#question')
 console.log(question)
 
@@ -64,47 +63,85 @@ const choice2 = document.querySelector('#answer2')
 const choice3 = document.querySelector('#answer3')
 const choice4 = document.querySelector('#answer4')
 
+const answerFeedback = document.querySelector('#answerFeedback')
 
-//SETS ALL CHOICE VARIABLES TO AN ARRAY SO THEY CAN BE LOOPED OVER LATER
+
+//STORES ALL ANSWER SET VARIABLES IN AN ARRAY SO THEY CAN BE LOOPED OVER LATER
 const answerArray = [choice1, choice2, choice3, choice4]
 
 
 
 //VARIOUS FUNCTION DECLARATIONS TO BE USED IN THE GAME LOGIC
-const incorrectAnswer = () => {alert('INCORRECT...TRY AGAIN')}
+const incorrectAnswer = () => {
+  answerFeedback.innerHTML = "INCORRECT... TRY AGAIN"
+
+  setTimeout( () => {
+    answerFeedback.innerHTML = ""
+  }, 2000)
+}
 
 const correctAnswer1 = () => {
-  alert('CORRECT!')
-  secondQuestion()
+  answerFeedback.innerHTML = "CORRECT!"
+  
+  setTimeout( () => {
+    answerFeedback.innerHTML = ""
+    secondQuestion()
+  }, 2000)
+  
 }
 
 const correctAnswer2 = () => {
-  alert('CORRECT!')
-  thirdQuestion()
+  answerFeedback.innerHTML = "CORRECT!"
+  
+  setTimeout( () => {
+    answerFeedback.innerHTML = ""
+    thirdQuestion()
+  }, 2000)
 }
 
 const correctAnswer3 = () => {
-  alert('CORRECT!')
-  fourthQuestion()
+  answerFeedback.innerHTML = "CORRECT!"
+  
+  setTimeout( () => {
+    answerFeedback.innerHTML = ""
+    fourthQuestion()
+  }, 2000)
 }
 
 const correctAnswer4 = () => {
-  alert('CORRECT!')
-  fifthQuestion()
+  answerFeedback.innerHTML = "CORRECT!"
+  
+  setTimeout( () => {
+    answerFeedback.innerHTML = ""
+    fifthQuestion()
+  }, 2000)
+ 
 }
 
 const correctAnswer5 = () => {
-  alert('CORRECT!')
-  sixthQuestion()
+  answerFeedback.innerHTML = "CORRECT!"
+  
+  setTimeout( () => {
+    answerFeedback.innerHTML = ""
+    sixthQuestion()
+  }, 2000)
 }
 
 const correctAnswer6 = () => {
-  alert('CORRECT!')
-  seventhQuestion()
+  answerFeedback.innerHTML = "CORRECT!"
+  
+  setTimeout( () => {
+    answerFeedback.innerHTML = ""
+    seventhQuestion()
+  }, 2000)
 }
 
 const correctAnswer7 = () => {
-  alert('CONGRATULATIONS, YOU WIN! If you want to play again, click RESET GAME')
+  answerFeedback.innerHTML = "CONGRATULATIONS, YOU GOT ALL THE CORRECT ANSWERS!"
+  
+  setTimeout( () => {
+    resetGame()
+  }, 3000)
 }
 
 const resetGame = () => {
@@ -121,13 +158,14 @@ startBtn.addEventListener('click', beginGame)
 
 
 
+//FUNCTIONS FOR EACH QUESTION
 function firstQuestion(){
     //ADDS THE HOVER CLASS TO ALL THE ANSWER DIVS
     answerArray.map((item) => {
       item.classList.add('hover')
     })
 
-    //SETTS ALL THE TEXT FOR QUESTION ONE
+    //SETS ALL THE TEXT FOR QUESTION ONE
     questionNumber.innerHTML = "QUESTION ONE:"
     startGameMsg.innerHTML = ""
     question.innerHTML = question1
@@ -136,13 +174,12 @@ function firstQuestion(){
     choice3.innerHTML = q1AnswerSet[2]
     choice4.innerHTML = q1AnswerSet[3]
 
+    //CHANGES INNERHTML AND FUNCTIONALITY OF STARTBTN DURING GAMEPLAY
     startBtn.removeEventListener('click', beginGame)
-
     startBtn.innerHTML = "RESET GAME"
-
     startBtn.addEventListener('click', resetGame)
 
-    //EVENT LISTENERS:
+    //EVENT LISTENERS FOR THIS ANSWER SET:
     choice1.addEventListener('click', incorrectAnswer)
     choice2.addEventListener('click', correctAnswer1)
     choice3.addEventListener('click', incorrectAnswer)
@@ -150,6 +187,8 @@ function firstQuestion(){
 }
 
 function secondQuestion(){
+
+  //SETS ALL THE TEXT FOR QUESTION TWO
   questionNumber.innerHTML = "QUESTION TWO:"
   question.innerHTML = question2
   choice1.innerHTML = q2AnswerSet[0]
@@ -157,36 +196,32 @@ function secondQuestion(){
   choice3.innerHTML = q2AnswerSet[2]
   choice4.innerHTML = q2AnswerSet[3]
 
-  choice1.removeEventListener('click', incorrectAnswer)
+  //REMOVES EVENT LISTENERS FROM PREVIOUS QUESTION
   choice2.removeEventListener('click', correctAnswer1)
   choice3.removeEventListener('click', incorrectAnswer)
-  choice4.removeEventListener('click', incorrectAnswer)
   
-  //NEW EVENT LISTENERS:
-  choice1.addEventListener('click', incorrectAnswer)
+  //NEW EVENT LISTENERS FOR THIS ANSWER SET:
   choice2.addEventListener('click', incorrectAnswer)
   choice3.addEventListener('click', correctAnswer2)
-  choice4.addEventListener('click', incorrectAnswer)
 }
 
 
 function thirdQuestion(){
-  //TWEAKS SOME STYLES ON THE ANSWER CHOICES, FOR AESTHETIC VALUE
+  //TWEAKS SOME STYLES ON THE ANSWER SET, FOR AESTHETIC PURPOSES
   answerArray.map((item) => {
-    item.style.width = "10rem";
+    // item.style.width = "10rem";
     item.style.height = "4rem"
-    item.style.fontSize = "1.15rem"
-    item.style.padding = ".7rem"
-    item.style.textAlign = "left"
+    item.style.width = "15rem"
+    item.style.fontSize = "1.3rem"
+    item.style.padding = ".5rem"
+    item.style.textAlign = "center"
+
   })
-  question.style.textAlign = "left"
 
-
-  // choice1.removeEventListener('click', incorrectAnswer)
-  // choice2.removeEventListener('click', incorrectAnswer)
+  //REMOVES RELEVANT EVENT LISTENERS FROM PREVIOUS QUESTION
   choice3.removeEventListener('click', correctAnswer2)
-  // choice4.removeEventListener('click', incorrectAnswer)
 
+  //SETS THE TEXT FOR THIS QUESTION AND ANSWER SET
   questionNumber.innerHTML = "QUESTION THREE:"
   question.innerHTML = question3
   choice1.innerHTML = q3AnswerSet[0]
@@ -195,23 +230,22 @@ function thirdQuestion(){
   choice4.innerHTML = q3AnswerSet[3]
 
   //NEW EVENT LISTENER:
-  // choice1.addEventListener('click', incorrectAnswer)
-  // choice2.addEventListener('click', incorrectAnswer)
   choice3.addEventListener('click', correctAnswer3)
-  // choice4.addEventListener('click', incorrectAnswer)
 }
 
 
 function fourthQuestion(){
+  
   //RESETS/MODIFIES TWEAKED STYLES FROM PREVIOUS QUESTION
   answerArray.map((item) => {
     item.style.width = "7rem";
     item.style.height = "3.5rem"
-    item.style.fontSize = "1.5rem"
+    item.style.fontSize = "1.4rem"
     item.style.padding = ".5rem"
     item.style.textAlign = "center"
   })
 
+  //SETS THE TEXT FOR THIS QUESTION AND ANSWER SET
   questionNumber.innerHTML = "QUESTION FOUR:"
   question.innerHTML = question4
   choice1.innerHTML = q4AnswerSet[0]
@@ -219,19 +253,19 @@ function fourthQuestion(){
   choice3.innerHTML = q4AnswerSet[2]
   choice4.innerHTML = q4AnswerSet[3]
 
-  choice1.removeEventListener('click', incorrectAnswer)
-  choice2.removeEventListener('click', incorrectAnswer)
+  //REMOVES RELEVANT EVENT LISTENERS FROM PREVIOUS QUESTION
   choice3.removeEventListener('click', correctAnswer3)
   choice4.removeEventListener('click', incorrectAnswer)
 
-  choice1.addEventListener('click', incorrectAnswer)
-  choice2.addEventListener('click', incorrectAnswer)
+  //NEW EVENT LISTENERS:
   choice3.addEventListener('click', incorrectAnswer)
   choice4.addEventListener('click', correctAnswer4)
 }
 
 
 function fifthQuestion(){
+  
+  //SETS THE TEXT FOR THIS QUESTION AND ANSWER SET
   questionNumber.innerHTML = "QUESTION FIVE:"
   question.innerHTML = question5
   choice1.innerHTML = q5AnswerSet[0]
@@ -239,29 +273,29 @@ function fifthQuestion(){
   choice3.innerHTML = q5AnswerSet[2]
   choice4.innerHTML = q5AnswerSet[3]
 
-  choice1.removeEventListener('click', incorrectAnswer)
+  //REMOVES RELEVANT EVENT LISTENERS FROM PREVIOUS QUESTION
   choice2.removeEventListener('click', incorrectAnswer)
-  choice3.removeEventListener('click', incorrectAnswer)
   choice4.removeEventListener('click', correctAnswer4)
   
-  choice1.addEventListener('click', incorrectAnswer)
+  //NEW EVENT LISTENERS:
   choice2.addEventListener('click', correctAnswer5)
-  choice3.addEventListener('click', incorrectAnswer)
   choice4.addEventListener('click', incorrectAnswer)
 }
 
 
 function sixthQuestion(){
-  //TWEAKS SOME STYLES ON THE ANSWER CHOICES, FOR AESTHETIC VALUE
+  
+  //TWEAKS SOME STYLES ON THE ANSWER SET, FOR AESTHETIC PURPOSES
   answerArray.map((item) => {
     item.style.width = "10rem";
-    item.style.height = "4rem"
-    item.style.fontSize = "1.1rem"
-    item.style.padding = ".7rem"
-    item.style.textAlign = "left"
+    item.style.height = "4.3rem"
+    item.style.width = "15rem"
+    item.style.fontSize = "1.2rem"
+    item.style.padding = ".5rem"
+    item.style.textAlign = "center"
   })
 
-
+  //SETS THE TEXT FOR THIS QUESTION AND ANSWER SET
   questionNumber.innerHTML = "QUESTION SIX:"
   question.innerHTML = question6
   choice1.innerHTML = q6AnswerSet[0]
@@ -269,15 +303,13 @@ function sixthQuestion(){
   choice3.innerHTML = q6AnswerSet[2]
   choice4.innerHTML = q6AnswerSet[3]
 
+  //REMOVES RELEVANT EVENT LISTENERS FROM PREVIOUS QUESTION
   choice1.removeEventListener('click', incorrectAnswer)
   choice2.removeEventListener('click', correctAnswer5)
-  choice3.removeEventListener('click', incorrectAnswer)
-  choice4.removeEventListener('click', incorrectAnswer)
 
+  //NEW EVENT LISTENERS:
   choice1.addEventListener('click', correctAnswer6)
   choice2.addEventListener('click', incorrectAnswer)
-  choice3.addEventListener('click', incorrectAnswer)
-  choice4.addEventListener('click', incorrectAnswer)
 }
 
 
@@ -286,12 +318,12 @@ function seventhQuestion(){
   answerArray.map((item) => {
     item.style.width = "10rem";
     item.style.height = "3.5rem"
-    item.style.fontSize = "1.5rem"
+    item.style.fontSize = "1.3rem"
     item.style.padding = ".5rem"
     item.style.textAlign = "center"
   })
 
-
+  //SETS THE TEXT FOR THIS QUESTION AND ANSWER SET
   questionNumber.innerHTML = "QUESTION SEVEN:"
   question.innerHTML = question7
   choice1.innerHTML = q7AnswerSet[0]
@@ -299,13 +331,11 @@ function seventhQuestion(){
   choice3.innerHTML = q7AnswerSet[2]
   choice4.innerHTML = q7AnswerSet[3]
 
+  //REMOVES RELEVANT EVENT LISTENERS FROM PREVIOUS QUESTION
   choice1.removeEventListener('click', correctAnswer6)
-  choice2.removeEventListener('click', incorrectAnswer)
-  choice3.removeEventListener('click', incorrectAnswer)
   choice4.removeEventListener('click', incorrectAnswer)
 
+  //NEW EVENT LISTENERS:
   choice1.addEventListener('click', incorrectAnswer)
-  choice2.addEventListener('click', incorrectAnswer)
-  choice3.addEventListener('click', incorrectAnswer)
   choice4.addEventListener('click', correctAnswer7)
 }
