@@ -1,14 +1,10 @@
 body{
-  /* margin: 0 auto; */
   padding: 0;
   background-color: rgb(63, 71, 71);
   color: white;
-  /* justify-content: center; */
 }
 header{
-  /* margin: 0; */
   padding: 2rem;
-  /* align-self: center; */
   height: 14rem;
   background-color: rgb(63, 71, 71);
   color: white;
@@ -50,21 +46,18 @@ main{
 }
 
 .col{
-  /* border: 3px solid white; */
   margin: 0 3rem 0 3rem;
   text-align: center;
 }
 
 .row{
   display: flex;
-  /* border: 3px solid red; */
   justify-content: center;
 }
 
 #row2{
   font-size: 2rem;
   font-family: "MiddleEarth";
-  /* font-style: italic; */
 }
 
 #row3{
@@ -89,14 +82,6 @@ main{
   font-family: Georgia;
   font-size: 1.5rem;
 }
-
-/* #test{
-  border-radius: 10px;
-  height: 3.5rem;
-  padding: .5rem;
-  font-family: Georgia;
-  font-size: 1.5rem;
-} */
 
 .hover:hover{
   border: 2px solid white;
@@ -143,41 +128,27 @@ main{
 
 @media (max-width: 575.98px) {
   header{
-    /* margin: 0; */
     padding: 1.5rem;
-    /* align-self: center; */
     height: 9rem;
-    /* background-color: rgb(63, 71, 71);
-    color: white;
-    margin-bottom: 2rem;
-    text-align: center; */
   }
 
   h1{
-    /* margin-top: 0; */
     font-size: 3rem;
-    /* font-family: "Hobbiton Brushhand"; */
   }
 
   h3{
     font-size: 1.7rem;
-    /* font-family: "MiddleEarth"; */
   }
 
   #row2{
     font-size: 1.19rem;
-    /* font-family: "MiddleEarth"; */
-    /* font-style: italic; */
   }
 
   #questionNumber{
-    /* margin-top: .7rem; */
     font-size: 1.2rem;
-    /* font-family: "MiddleEarth"; */
   }
 
   .col{
-    /* border: 3px solid white; */
     margin: 0 .7rem 0 .7rem;
     text-align: center;
   }
@@ -196,12 +167,6 @@ main{
     margin-top: 1.9rem;
   }
 
-  /* .smallScreen{
-    width: 15rem;
-    height: 3rem;
-    font-size: .2rem;
-  } */
-
   #answer1, #answer2,
   #answer3, #answer4 {
   border-radius: 10px;
@@ -213,8 +178,6 @@ main{
   font-family: Georgia;
   font-size: 1.1rem;
   }
-
-  
 
   #row5{
     margin-top: 3.5rem;
@@ -230,11 +193,9 @@ main{
 
   #startBtn{
     font-size: 1.2rem;
-    /* font-family: "MiddleEarth"; */
     letter-spacing: .4rem;
     border: 2px solid white;
     border-radius: 10px;
-    /* cursor: pointer; */
   }
 
   #row7{
@@ -243,7 +204,5 @@ main{
   
   #tagline{
     font-size: 1rem;
-    /* font-style: italic;
-    font-family: "MiddleEarth" */
   }
 }
