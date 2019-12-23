@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Hobbiton Brushhand";
+  src: url(../fonts/hobbitonbrushhand.ttf);
+}
+
+@font-face {
+  font-family: "MiddleEarth";
+  src: url(../fonts/MiddleEarth.ttf);
+}
+
 body{
   padding: 0;
   background-color: rgb(63, 71, 71);
