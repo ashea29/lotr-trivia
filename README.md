@@ -10,7 +10,7 @@ I built this trivia game as Project 1 for General Assembly’s Software Engineer
 
 # Technologies/Frameworks Used
 
-For this project, I mostly used HTML, CSS, and vanilla JavaScript. However, I also incorporated Normalize.css as well as the Materialize CSS framework - specifically the grid, to aid in making the game responsive.
+HTML, CSS, and vanilla JavaScript
 
 
 # How to Use
@@ -22,7 +22,7 @@ Play, and enjoy!
 
 # Known Issues
 
-There were some issues in making the game look good on different screen sizes. For the most part, the app should look good on computers with an average-size monitor, as well as on most iPhone-size phones (though with some of the questions the text for the answer choices is a bit out of sorts). Eventually, I plan to rework some of the styling to try to fix this issue, and to add more responsiveness for various screen sizes.
+I am currently in the process of making the app responsive. For now, the app looks best on average-size monitors and laptop screens.
 
 
 # Credits
