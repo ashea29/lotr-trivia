@@ -1,220 +1,245 @@
 @font-face {
-  font-family: "Hobbiton Brushhand";
-  src: url(../fonts/hobbitonbrushhand.ttf);
+  font-family: "HobbitonBrushhand";
+  src: url(./fonts/HobbitonBrushhandhobbitonBrush-WygA.ttf);
 }
 
 @font-face {
   font-family: "MiddleEarth";
-  src: url(../fonts/MiddleEarth.ttf);
+  src: url(./fonts/MiddleEarth.ttf);
 }
 
-body{
+:root {
+  --primary-color: rgb(63, 71, 71);
+  --primary-alpha: rgba(63, 71, 71, .8);
+  --font-xsmall: 1rem;
+  --font-small: 1.25rem;
+  --font-medium: 1.5rem;
+  --font-large: 1.7rem;
+  --font-xlarge: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* HELPER CLASSES */
+.me-font-xs {
+  font-size: var(--font-xsmall);
+  font-family: "MiddleEarth";  
+}
+
+.me-font-sm {
+  font-size: var(--font-small);
+  font-family: "MiddleEarth";
+}
+
+.me-font-md {
+  font-size: var(--font-medium);
+  font-family: "MiddleEarth";
+}
+
+.me-font-lg {
+  font-size: var(--font-large);
+  font-family: "MiddleEarth";
+}
+
+.mp-zero {
   margin: 0;
   padding: 0;
-  background-color: rgb(63, 71, 71);
-  color: white;
 }
 
-header{
-  padding: 2rem;
-  height: 14rem;
-  background-color: rgb(63, 71, 71);
-  color: white;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-h1{
-  margin-top: 0;
-  font-size: 6rem;
-  font-family: "Hobbiton Brushhand";
-}
-
-h3{
-  font-size: 2.5rem;
-  font-family: "MiddleEarth";
-}
-
-main{
-  padding-top: 3rem;
-  background: url("../img/background-img2.jpg") no-repeat;
-  width: 100vw;
-  height: 85vh;
-  justify-content: center;
-}
-
-.container{
-  width: 75vw;
-  height: 77vh;
-  background: rgba(63, 71, 71, .7);
-  border-radius: 10px;
-  
-}
-
-#questionNumber{
-  margin-top: 1rem;
-  font-size: 3rem;
-  font-family: "MiddleEarth";
-}
-
-.col{
-  margin: 0 3rem 0 3rem;
-  text-align: center;
-}
-
-.row{
+.x-center {
   display: flex;
   justify-content: center;
 }
 
-#row2{
-  font-size: 2rem;
-  font-family: "MiddleEarth";
+.y-center {
+  display: flex;
+  align-items: center;
 }
 
-#row3{
-  margin-top: 3rem;
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#question{
-  font-size: 1.5rem;
-  font-family: Georgia;
-  font-weight: bold;
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-#row4{
-  margin-top: 3rem;
+.flexrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#answer1, #answer2,
-#answer3, #answer4 {
-  border-radius: 10px;
-  height: 3.5rem;
-  padding: .5rem;
-  font-family: Georgia;
-  font-size: 1.5rem;
+.hidden {
+  display: none !important;
 }
 
-.hover:hover{
-  border: 2px solid white;
-  cursor: pointer;
+html {
+  background: url("./img/background-img2.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#row5{
-  margin-top: 3.5rem;
-}
-
-#answerFeedback{
-  font-size: 1.7rem;
-  font-family: "MiddleEarth"
-}
-
-#row6{
-  margin-top: 5rem;
-}
-
-#startBtn{
-  font-size: 2rem;
-  font-family: "MiddleEarth";
-  letter-spacing: .5rem;
-  border: 3px solid white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-#startBtn:hover{
-  border: 3px solid gray;
-  background: rgb(63, 71, 71);
-  color: white;
-}
-
-#row7{
-  margin-top: 2rem;
-}
-
-#tagline{
-  font-size: 1.5rem;
-  font-style: italic;
-  font-family: "MiddleEarth"
-}
-
-@media (max-width: 575.98px) {
-  header{
-    padding: 1.5rem;
-    height: 9rem;
-  }
-
-  h1{
-    font-size: 3rem;
-  }
-
-  h3{
-    font-size: 1.7rem;
-  }
-
-  #row2{
-    font-size: 1.19rem;
-  }
-
-  #questionNumber{
-    font-size: 1.2rem;
-  }
-
-  .col{
-    margin: 0 .7rem 0 .7rem;
-    text-align: center;
-  }
-
-  #row3{
-    margin-top: 1.3rem;
-  }
-
-  #question{
-    font-size: .9rem;
-    font-family: Georgia;
-    font-weight: bold;
-  }
-
-  #row4{
-    margin-top: 1.9rem;
-  }
-
-  #answer1, #answer2,
-  #answer3, #answer4 {
-  border-radius: 10px;
-  height: 3.5rem;
-  width: 5rem;
-  text-decoration: underline;
-  border: none;
+body {
+  margin: 0;
   padding: 0;
-  font-family: Georgia;
-  font-size: 1.1rem;
-  }
-
-  #row5{
-    margin-top: 3.5rem;
-  }
-
-  #answerFeedback{
-    font-size: 1rem;
-  }
-
-  #row6{
-    margin-top: 3rem;
-  }
-
-  #startBtn{
-    font-size: 1.2rem;
-    letter-spacing: .4rem;
-    border: 2px solid white;
-    border-radius: 10px;
-  }
-
-  #row7{
-    margin-top: 1.5rem;
-  }
-  
-  #tagline{
-    font-size: 1rem;
-  }
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
 }
+
+header {
+  min-height: 6.5rem;
+  height: max-content;
+  margin: 0;
+  padding: 0 1rem 1rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-xlarge);
+  font-weight: 400;
+  font-family: "HobbitonBrushhand";
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding-top: 3rem;
+}
+
+.gameboard {
+  background: var(--primary-alpha);
+  min-width: 60%;
+  width: 60%;
+  min-height: 73%;
+  height: max-content;
+  border-radius: 0.5rem;
+  font-family: Georgia;
+  color: #fff;
+  padding: 1.5rem;
+}
+
+.inner-container {
+  min-height: 59vh;
+  height: 100%;
+}
+
+.score-control {
+  width: 100%;
+  color: #fcdd66;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+}
+
+.score {
+  margin-right: 1.1rem;
+}
+
+.total-questions {
+  margin-left: 0.7rem;
+}
+
+#gc1 {
+  margin-bottom: 1.3rem;
+}
+
+#gc3 {
+  padding: 0 2rem;
+  margin-bottom: 1.7rem;
+}
+
+#gc5 {
+  margin-bottom: 5.9rem;
+}
+
+.question {
+  font-size: calc(var(--font-xsmall) + 0.1);
+  font-weight: bold;
+  width: 25rem;
+  text-align: justify;
+}
+
+.answer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.highlight {
+  border-color: #fcdd66 !important;
+  color: #fcdd66 !important;
+}
+
+.selected {
+  color: #fcdd66;
+  font-size: var(--font-small) !important;
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+}
+
+.answer-control {
+  width: 25.5rem;
+  margin-bottom: 1rem;
+}
+
+.answerRef {
+  border: 2px solid rgb(152, 152, 152);
+  border-radius: 0.3rem;
+  background: var(--primary-color);
+  color: #fcdd66;
+  font-size: calc(var(--font-xsmall) + 0.2);
+  font-family: "MiddleEarth";
+  width: 3rem;
+  padding: 0.655rem;
+  text-align: center;
+  z-index: 3;
+}
+
+.answer {
+  padding: 0.77rem 0.5rem 0.77rem 1.4rem;
+  margin: 0;
+  margin-left: -3px;
+  overflow-x: hidden;
+  width: 22rem;
+  font-size: calc(var(--font-xsmall) + 0.2);
+  border: 2px solid #989898;
+  border-left: none;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  background: var(--primary-color);
+}
+
+.start-btn {
+  border: 3px solid white;
+  border-radius: 0.5rem;
+  letter-spacing: 0.3rem;
+  padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+  margin-top: 1rem !important;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  border: 3px solid rgb(152, 152, 152);
+  background: var(--primary-color);
+  color: #fcdd66;
+}
+
+.tagline {
+  font-style: italic;
+}
+

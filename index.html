@@ -3,58 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>LOTR - Trivia Game</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/materialize.min.css">  
-  <link rel="stylesheet" href="css/main.css">
-
-
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header>
-    <h1>Lord of the Rings</h1>
-    <h3>Trivia Game</h3>
+    <h1 id="title" class="title mp-zero">Lord of the Rings</h1>
+    <h3 id="subtitle" class="me-font-md mp-zero">Trivia Game</h3>
   </header>
-
-  <main class="outer-container">
-    
-      <div class="container">
-        <div class="row" id="row1">
-          <div class="col"  id="questionNumber"></div>
+  <div id="container" class="container x-center">
+    <div id="gameboard" class="gameboard">
+      <div id="score-control" class="score-control me-font-md hidden">
+        <div id="score" class="score">Score:</div>
+        <div id="number-correct" class="number-correct">0</div>
+        <div id="total-questions" class="total-questions">/ 7</div>
+      </div>
+      <div id="inner-container" class="inner-container flexcolumn">
+        <div id="gc1" class="game-control x-center hidden">
+          <div id="question-number" class="me-font-md">QUESTION #</div>
         </div>
-
-        <div class="row" id="row2">
-          <div class="col"  id="startGameMsg">CLICK THE START BUTTON TO BEGIN!</div>
+        <div id="gc2" class="game-control x-center">
+          <div id="start-game-msg" class="me-font-md">CLICK THE START BUTTON TO BEGIN!</div>
         </div>
-
-        <div class="row" id="row3">
-          <div class="col"  id="question"></div>
+        <div id="gc3" class="game-control x-center hidden">
+          <div id="question" class="question">Question # Text</div>
         </div>
+        <div id="gc4" class="game-control answer-column hidden">
+          <div id="ac1" class="answer-control flexrow">
+            <div id="answerRef-a" class="answerRef hidden">A)</div>
+            <div id="answer1" class="answer hidden">Answer 1</div>
+          </div>
 
-        <div class="row" id="row4">
-          <div class="col"  id="answer1" data-ID="answer"></div>
-          <div class="col" id="answer2" data-ID="answer"></div>
-          <div class="col" id="answer3" data-ID="answer"></div>
-          <div class="col" id="answer4" data-ID="answer"></div>
+          <div id="ac2" class="answer-control flexrow">
+            <div id="answerRef-b" class="answerRef hidden">B)</div>
+            <div id="answer2" class="answer hidden">Answer 2</div>
+          </div>
+
+          <div id="ac3" class="answer-control flexrow">
+            <div id="answerRef-c" class="answerRef hidden">C)</div>
+            <div id="answer3" class="answer hidden">Answer 3</div>
+          </div>
+          
+          <div id="ac4" class="answer-control flexrow">
+            <div id="answerRef-d" class="answerRef hidden">D)</div>
+            <div id="answer4" class="answer hidden">Answer 4</div>
+          </div>
+          
         </div>
-
-        <div class="row" id="row5">
-          <div class="col"  id="answerFeedback"></div> 
+        <div id="gc5" class="game-control x-center hidden">
+          <div id="win-game-msg" class="me-font-md">CONGRATULATIONS, YOU WIN!</div>
         </div>
-
-        <div class="row" id="row6">
-          <div class="col"  id="startBtn">START</div> 
+        <div id="gc6" class="game-control x-center">
+          <div id="start-btn" class="start-btn me-font-sm">START</div>
         </div>
-
-        <div class="row" id="row7">
-          <div class="col"  id="tagline">One trivia game to rule them all...</div> 
+        <div id="gc7" class="game-control x-center">
+          <div id="tagline" class="tagline me-font-sm">One trivia game to rule them all...</div>
         </div>
       </div>
-    
+    </div>
+  </div>
 
-  </main>
-
-  <script src="js/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
