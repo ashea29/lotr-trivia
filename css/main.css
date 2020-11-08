@@ -1,11 +1,11 @@
 @font-face {
   font-family: "HobbitonBrushhand";
-  src: url(./fonts/HobbitonBrushhandhobbitonBrush-WygA.ttf);
+  src: url(../fonts/hobbitonbrushhand.ttf);
 }
 
 @font-face {
   font-family: "MiddleEarth";
-  src: url(./fonts/MiddleEarth.ttf);
+  src: url(../fonts/MiddleEarth.ttf);
 }
 
 :root {
